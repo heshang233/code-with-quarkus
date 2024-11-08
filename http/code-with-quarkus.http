@@ -1,0 +1,13 @@
+# hello world
+GET http://localhost:8080/{{name}}
+
+<> 2024-11-07T140145.200.txt
+
+###
+# /v1/authentication
+POST http://localhost:8080/v1/authentication
+Content-Type: application/json
+
+
+###
+GET http://localhost:8080/v1/apath/{{name}}/path
