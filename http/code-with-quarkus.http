@@ -10,4 +10,10 @@ Content-Type: application/json
 
 
 ###
-GET http://localhost:8080/v1/apath/{{name}}/path
+GET http://localhost:8080/rest/6/sub/2
+
+###
+GET http://localhost:8080/rest/1/second/2
+
+###
+GET http://localhost:8080/uri/21
