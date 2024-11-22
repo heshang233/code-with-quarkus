@@ -20,4 +20,7 @@ public interface AbstractErrorEntity {
     @Nullable
     @JsonProperty("field_name")
     String fieldName();
+
+    @Nullable
+    String stacktrace();
 }

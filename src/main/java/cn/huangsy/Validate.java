@@ -1,5 +1,6 @@
 package cn.huangsy;
 
+import cn.huangsy.exception.ValidationException;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
@@ -23,8 +24,7 @@ public class Validate {
     public void checkValid() {
         Set<ConstraintViolation<Validate>> violations = validator.validate(this);
         if(violations.size() != 0) {
-            // todo 异常处理
-//            throw new ValidationException(this, violations);
+            throw new ValidationException(this, violations);
         }
     }
 }
