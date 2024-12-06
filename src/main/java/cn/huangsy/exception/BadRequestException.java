@@ -22,4 +22,8 @@ public class BadRequestException extends HttpStatusCodeException {
     public BadRequestException(Throwable cause, ResponseEntityView<Object> responseEntityView, String message) {
         super(cause, Response.Status.BAD_REQUEST, ERROR_KEY, responseEntityView, message);
     }
+
+    public BadRequestException(Throwable cause, String key, ResponseEntityView<Object> responseEntityView, String message) {
+        super(cause, Response.Status.BAD_REQUEST, key, responseEntityView, message);
+    }
 }

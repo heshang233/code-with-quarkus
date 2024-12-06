@@ -4,6 +4,7 @@ import cn.huangsy.model.ErrorEntity;
 import cn.huangsy.model.ResponseEntityView;
 import cn.huangsy.utils.ConfigUtils;
 import jakarta.ws.rs.WebApplicationException;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
@@ -25,6 +26,10 @@ public class ExceptionHandler implements ExceptionMapper<Throwable> {
     public static Response createResponse(Throwable throwable, Response.Status status) {
         if (throwable instanceof WebApplicationException exception) {
             return exception.getResponse();
+        }
+
+        if (throwable instanceof BusinessException exception) {
+
         }
 
         ErrorEntity.Builder builder = ErrorEntity.builder().message(throwable.getMessage());

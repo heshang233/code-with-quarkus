@@ -6,5 +6,5 @@ quarkus:
     username: app
     password: app
     jdbc:
-      url: jdbc:postgresql://10.0.63.107:5432/app
+      url: jdbc:postgresql://10.0.63.121:5432/app
       max-size: 20
