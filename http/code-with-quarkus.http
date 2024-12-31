@@ -17,3 +17,13 @@ GET http://localhost:8080/rest/1/second/2
 
 ###
 GET http://localhost:8080/uri/21
+
+###
+POST http://10.0.63.57:8080/myservice/oauth2/token
+Content-Type: application/json
+
+{
+  "user": "huangsy",
+  "password": "123456",
+  "expirationDays": 30
+}
